@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>dashboard</title>
+   <link href="static\css\style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <style>
+   body
+{
+ height: 100vh;
+ background-color:green;
+ background-image: linear-gradient(to bottom right,lavenderblush,lightseagreen);
+ background-repeat:no repeat;
+ 
+}
+#a {
+  background-color: lightblue;
+  color : black;
+  padding: 60px;
+  text-align: center;
+}
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav1 a {
+  position: absolute;
+  right: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left:0;
+}
+
+#mySidenav1 a:hover {
+  right:0;
+}
+#admin {
+  top: 60px;
+  background-color: #04AA6D;
+}
+
+#user {
+  top: 120px;
+  background-color: #2196F3;
+}
+
+#signup {
+  top: 130px;
+  background-color: #f44336;
+}
+
+#contact {
+  top: 190px;
+  background-color: #555
+}
+#b{
+  background-image: linear-gradient(to bottom right,darkcyan,darkslateblue);
+  color: white;
+  text-align: center;
+}
+#r{
+
+  background-color: #04AA6D;
+  color: white;
+  background-size: 3px 5px;
+
+}
+
+  </style>
+
+  <body>
+<div id="mySidenav" class="sidenav">
+  <a href="/" id="admin">Home</a>
+  <a href="/admin" id="user">Assign Agent</a>
+</div>
+<div id="mySidenav1" class="sidenav1">
+  <a href="/progress" id="signup">Progress</a>
+  <a href="/logout" id="contact">Logout</a>
+</div>   
+  <div id = "a">
+    <center>
+    <H1>CUSTOMER CARE SUPPORT</H1>
+    <H2 >ADMIN DASHBOARD</H2>
+  </div>
+<br>
+
+<div>
+<h1 id="r"><center><strong>ADMIN DASHBOARD</strong></center></h1>
+<br>
+<form name="dashboard" method="get" action="/admin" align="center">
+<table id="b" cellpadding="5px" cellspacing="5px" border="1 px solid black" align="center">
+<tr>
+<th>COMPLAIN ID</th>
+<th>COUSTOMER NAME</th>
+<th>E-MAIL</th>
+<th>COMPLAIN</th>
+<th>AGENT</th>
+</tr>
+{% for row in account %}
+<tr>
+<td>{{row.0}}</td>
+<td>{{row.1}}</td>
+<td>{{row.2}}</td>
+<td>{{row.4}}</td>
+<td><input type="submit" class="abc" value="ASSIGN AGENT">
+<a href="/delete/{{row.0}}" onclick="return confirm('Are you sure to delete')" class="abc">remove</a></td>
+</tr>
+{% endfor %}
+
+
+</table>
+</form>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+
+
+</body>
+</html>

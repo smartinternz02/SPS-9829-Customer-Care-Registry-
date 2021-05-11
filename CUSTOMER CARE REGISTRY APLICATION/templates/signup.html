@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>signup</title>
+   <link href="/static/css/style.css" type="text/css" rel="stylesheet"/>
+   
+  </head>
+  <style>
+  body
+{
+ height: 100vh;
+ background-color:green;
+ background-image: linear-gradient(to bottom right,lavenderblush,lightseagreen);
+ background-repeat:no repeat;
+ 
+}
+#a {
+  background-color: lightblue;
+  color : black;
+  padding: 60px;
+  text-align: center;
+}
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav1 a {
+  position: absolute;
+  right: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left:0;
+}
+
+#mySidenav1 a:hover {
+  right:0;
+}
+#admin {
+  top: 60px;
+  background-color: #04AA6D;
+}
+
+#user {
+  top: 120px;
+  background-color: #2196F3;
+}
+
+#signup {
+  top: 130px;
+  background-color: #f44336;
+}
+
+#contact {
+  top: 190px;
+  background-color: #555
+}
+#b{
+  background-image: linear-gradient(to bottom right,darkcyan,darkslateblue);
+  color: white;
+  text-align: center;
+}
+
+  </style>
+  <body>
+<div id="mySidenav" class="sidenav">
+  <a href="/adminlogin" id="admin">Admin</a>
+  <a href="/userlogin" id="user">User</a>
+</div>
+<div id="mySidenav1" class="sidenav1">
+  <a href="/signup" id="signup">Signup</a>
+  <a href="/contact" id="contact">Contact</a>
+</div>   
+  <div id = "a">
+    <center>
+    <H1>CUSTOMER CARE SUPPORT</H1>
+    <H2 > USER SIGNUP</H2>
+  </div>
+  
+     
+    <table id="b" cellpadding="2px" cellspacing="5px" border="1 px solid black" align="center"   width="500">
+    <div class="table">
+     <tr>
+      <form name="signup" method="post" action="/signup" align="center">
+      <td>
+        <strong><center> <label for="name">Signup</label></centr></strong><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="enter your name"><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="enter your email id"><br>
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile" name="mobile" placeholder="enter your ph no."><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password"><br><br>
+        <center><input type="submit" align="center" class="abc" value="Signup"></center><br>
+          <center> {{msg}} </center><br>
+    <td>
+    </form>
+   </tr>
+   </div>
+  </table>
+
+ </body>
+</html>

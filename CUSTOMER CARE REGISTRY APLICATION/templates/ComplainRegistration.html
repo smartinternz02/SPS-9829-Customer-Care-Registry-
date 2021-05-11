@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Complain Registration</title>
+   <link href="static\css\style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <style>
+  body
+{
+background-color:lavenderblush;
+}
+#b
+{
+
+font-size:30px;
+}
+   a
+{
+ font-size:20px;
+  background-color:#ffffff;
+  color:black;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+  
+}
+body
+{
+ height: 100vh;
+ background-color:green;
+ background-image: linear-gradient(to bottom right,lavenderblush,LightSeaGreen);
+ background-repeat:no repeat;
+}
+#a {
+  background-color: lightblue;
+  color : black;
+  padding: 60px;
+  text-align: center;
+}
+#b{
+  background-image: linear-gradient(to bottom right,darkcyan,darkslateblue);
+  color: white;
+  text-align: center;
+}
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav1 a {
+  position: absolute;
+  right: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left:0;
+}
+
+#mySidenav1 a:hover {
+  right:0;
+}
+#admin {
+  top: 60px;
+  background-color: #04AA6D;
+}
+
+#user {
+  top: 120px;
+  background-color: #2196F3;
+}
+
+#signup {
+  top: 130px;
+  background-color: #f44336;
+}
+
+#contact {
+  top: 190px;
+  background-color: #555
+}
+#t {
+ border-collapse: collapse;
+ color: white;
+}
+
+  </style>
+  <body>
+    <div id="mySidenav" class="sidenav">
+  <a href="/" id="admin">Home</a>
+  <a href="/admin" id="user">Admin</a>
+</div>
+<div id="mySidenav1" class="sidenav1">
+  <a href="/track" id="signup">Track</a>
+  <a href="/logout" id="contact">Logout</a>
+</div>   
+   <div id = "a">
+    <center>
+    <H1>CUSTOMER CARE SUPPORT</H1>
+    <H2 > COMPLAIN REGISTRY PORTAL</H2>
+  </div>
+  
+ <br>
+   <br>
+    <table id="b" cellpadding="0px" cellspacing="5px" border="1 px solid black" align="center"  >
+     <tr>
+      <form name="ComplainRegistration" method="post" action="/ComplainRegistration" align="center">
+     
+      <td>
+       <table  cellpadding="10px" cellspacing="5px" >
+        <tr>
+         <td  colspan="3" >
+         <strong><center>COMPLAIN REGISTRATION</center></strong>
+         </td>
+        </tr>
+        <tr>
+         <td>Name</td>
+         <td>:</td>
+         <td><input name="name" type="text" id="name" placeholder="Enter Name"></td>
+        </tr>
+         <tr>
+         <td>E-mail Id</td>
+         <td>:</td>
+         <td><input name="email" type="text" id="email" placeholder="Enter E-mail Id"></td>
+        </tr>
+         <tr>
+         <td>Phone No.</td>
+         <td>:</td>
+         <td><input name="mobileno" type="text" id="mobileno" placeholder="Enter Phone No"></td>
+        </tr>
+        <tr>
+         <td> Complain Description</td>
+         <td>:</td>
+         <td><input name="complain description" type="text" id="complain descriptions" placeholder="Enter Complain"></td>
+        </tr>
+        <tr>
+         <td  colspan="3" >
+         <center><input name="submit" type="submit" class="abc" value="Submit" ></center>
+         </td>
+        </tr>
+         <tr>
+         <td  colspan="3" >
+         <center>{{msg}}</center>
+         </td>
+        </tr>
+       </table>
+      </td>
+     </form>
+    </tr>
+   </table>
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+   </body>
+</html>
